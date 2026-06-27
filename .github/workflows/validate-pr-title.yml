@@ -1,0 +1,41 @@
+# Checks that every PR title follows the Conventional Commits format with an allowed type prefix.
+
+# Each PR title is verified against a list of allowed semantic commit types (feat, fix, chore, etc.). This improves
+# readability, enforces consistent formatting and keeps the commit history clean and helps with release automation.
+
+# Workflow name — user defined - can be any descriptive name.
+name: Validate PR Title
+
+on:
+  pull_request:
+    # Runs on PR creation, title edits, and commit updates.
+    types: [ opened, edited, synchronize ]
+
+jobs:
+  # Job ID - user defined — can be any descriptive name.
+  validate-pr-title:
+    name: Validate PR Title
+    runs-on: ubuntu-latest
+    steps:
+
+      # Step-1 - Validate the PR title against allowed semantic commit types.
+      - name: Validate PR Title Against Conventional Commits
+        # Use amannn/action-semantic-pull-request GitHub Action to validate PR titles against Conventional Commit rules.
+        uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50
+        # uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50
+        env:
+          # Auto-provided by GitHub Actions. Allows the action to access PR metadata like title etc. via GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Allowed Conventional Commits types for PR title validation.
+          types: |
+            feat
+            fix
+            chore
+            docs
+            test
+            refactor
+            perf
+            ci
+            build
+            revert
