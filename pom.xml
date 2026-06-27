@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>io.github.airway-goes</groupId>
+  <artifactId>hello-world</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+
+  <name>hello-world</name>
+  <description>
+    A hello world project.
+  </description>
+  <url>https://github.com/airway-goes/hello-world</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>airway-goes</id>
+      <name>Airway</name>
+      <email>airway.goes_09@icloud.com</email>
+      <organization>Airway</organization>
+      <organizationUrl>www.airway.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/airway-goes/hello-world.git</connection>
+    <developerConnection>scm:git:https://github.com/airway-goes/hello-world.git</developerConnection>
+    <url>https://github.com/airway-goes/hello-world</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+  </properties>
+</project>
