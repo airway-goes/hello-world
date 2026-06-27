@@ -72,7 +72,7 @@ jobs:
         # credentials matching 'server-id: github'. Since the target is implicitly defined in pom.xml,
         # 'mvn deploy -DskipTests' pushes the artifact to GitHub Packages.
         # plain deploy — no -Prelease, no GPG, no Central Portal involved
-        run: mvn deploy -DskipTests
+        run: mvn -X deploy -DskipTests
         env:
           # Auto-provided by GitHub Actions. Allows Maven to upload the SNAPSHOT artifact to GitHub Packages.
           # The 'server-id: github' in the 'Setup JDK 21' step configures Maven's settings.xml to use this token as

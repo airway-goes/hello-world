@@ -50,7 +50,7 @@ jobs:
           fi
 
       - name: Build & Deploy to Maven Central
-        run: mvn deploy -Prelease
+        run: mvn -X deploy -Prelease
         env:
           MAVEN_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}

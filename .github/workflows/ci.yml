@@ -46,7 +46,7 @@ jobs:
       - name: Checkstyle, Build, Test & Coverage
         # Fails immediately on any Checkstyle violation - do not proceed to compile.
         # Order: checkstyle check (validate, fails fast) → compile → test → jacoco check ≥ 80% (verify).
-        run: mvn verify
+        run: mvn -X verify
 
       # Step-4 - SonarCloud analysis.
       - name: SonarCloud Analysis
@@ -58,4 +58,4 @@ jobs:
           # qualitygate.wait=true makes this step fail if the Quality Gate fails — since this job is a required status
           # check, a failed quality gate prevents PR merge.
         run: |
-          mvn sonar:sonar -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300
+          mvn -X sonar:sonar -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300

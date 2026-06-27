@@ -79,7 +79,7 @@ jobs:
       - name: Build Code For CodeQL Analysis
         if: steps.check-java.outputs.has_java_code == 'true'
         # Compiles the code so CodeQL has bytecode to analyze. Tests are skipped.
-        run: mvn compile -DskipTests
+        run: mvn -X compile -DskipTests
 
       # Step-6 - Perform CodeQL analysis.
       - name: Perform CodeQL Analysis
