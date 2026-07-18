@@ -70,7 +70,7 @@ jobs:
       - name: Initialize CodeQL
         if: steps.check-java.outputs.has_java_code == 'true'
         # Use codeql-action/init GitHub Action to initialize CodeQL with language extractors and build configuration.
-        uses: github/codeql-action/init@v4.36.2
+        uses: github/codeql-action/init@v4.37.1
         with:
           # Tells CodeQL which language extractor to use.
           languages: java
@@ -86,4 +86,4 @@ jobs:
         if: steps.check-java.outputs.has_java_code == 'true'
         # Use codeql-action/analyze GitHub Action to run the actual analysis, upload the findings to the Security tab.
         # Any vulnerabilities found appear there but not as a build failure — CodeQL findings are advisory by default.
-        uses: github/codeql-action/analyze@v4.36.2
+        uses: github/codeql-action/analyze@v4.37.1
