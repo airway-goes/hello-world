@@ -28,7 +28,7 @@ jobs:
       # Step-1 - Checkout the repository.
       - name: Checkout Repository
         # Use checkout@v7.0.0 GitHub Action to clone the repository into the runner workspace (GITHUB_WORKSPACE).
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v7.0.1
         with:
           # Disables shallow cloning and fetches full commit history for proper analysis by SonarCloud.
           fetch-depth: 0
