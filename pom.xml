@@ -59,7 +59,7 @@
 
     <central-publishing-maven-plugin.version>0.11.0</central-publishing-maven-plugin.version>
 
-    <sonar-scanner-plugin.version>5.7.0.6970</sonar-scanner-plugin.version>
+    <sonar-scanner-plugin.version>5.8.0.7211</sonar-scanner-plugin.version>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.organization>airway-goes</sonar.organization>
     <sonar.projectKey>airway-goes_hello-world</sonar.projectKey>
